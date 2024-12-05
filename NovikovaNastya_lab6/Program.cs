@@ -22,6 +22,7 @@ namespace NovikovaNastya_lab6
         static void Main(string[] args)
         {
             Task1();
+            Task3();
             Task4();
 
             Console.WriteLine("Нажмите какую-нибудь клавишу");
@@ -30,10 +31,23 @@ namespace NovikovaNastya_lab6
         }
         // Создать класс счет в банке с закрытыми полями: номер счета, баланс, тип банковского счета (использовать перечислимый тип из упр. 3.1).
         // Предусмотреть методы для доступа к данным – заполнения и чтения. Создать объект класса, заполнить его поля и вывести информацию об объекте класса на печать.
-
         static void Task1()
         {
             Console.WriteLine("Упражнение 7.1");
+            BankAccount FirstAccount = new BankAccount(55555555, 10005.0m, AccountType.Saving);
+            FirstAccount.DisplayInfo();
+
+            BankAccount SecondAccount = new BankAccount(66666666, 28564.90m, AccountType.Deposit);
+            SecondAccount.DisplayInfo();
+
+            BankAccount ThirdAccount = new BankAccount(88888888, 6734.87m, AccountType.Currency);
+            ThirdAccount.DisplayInfo();
+        }
+        //Добавить в класс счет в банке два метода: снять со счета и положить на счет.
+        //Метод снять со счета проверяет, возможно ли снять запрашиваемую сумму, и в случае положительного результата изменяет баланс.
+        static void Task3()
+        {
+            Console.WriteLine("Упражнение 7.3");
 
             BankAccount FirstAccount = new BankAccount(55555555, 10005.0m, AccountType.Saving);
             FirstAccount.DisplayInfo();
